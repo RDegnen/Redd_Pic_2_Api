@@ -9,7 +9,8 @@ class ImgursController < ApplicationController
     @subreddit = params[:name]
     @sort = params[:sort]
     @window = params[:window]
-    @response = RestClient.get("https://api.imgur.com/3/gallery/r/#{@subreddit}/#{@sort}/#{@window}", Authorization: "Client-ID #{ENV['IMGUR_CLIENT_ID']}")
+    @page = params[:page]
+    @response = RestClient.get("https://api.imgur.com/3/gallery/r/#{@subreddit}/#{@sort}/#{@window}/#{@page}", Authorization: "Client-ID #{ENV['IMGUR_CLIENT_ID']}")
     render json: @response, status: 200
   end
 
