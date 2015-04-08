@@ -13,6 +13,8 @@ gem 'pg'
 gem 'pry-rails'
 gem 'rest-client'
 gem 'rack-cors'
+gem 'redis-rails'
+gem 'dalli'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

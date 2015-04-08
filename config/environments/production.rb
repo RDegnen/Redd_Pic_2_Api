@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.cache_store = { :namespace => Redd_Pic_Api, :expires_in => 1.day, :compress => true }
   # Code is not reloaded between requests.
   config.cache_classes = true
 
