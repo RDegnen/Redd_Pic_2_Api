@@ -15,3 +15,4 @@ gem 'rest-client'
 gem 'rack-cors'
 gem 'redis-rails'
 gem 'dalli'
+gem 'rails_12factor', group: :production
