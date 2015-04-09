@@ -1,7 +1,7 @@
 class ImgursController < ApplicationController
 
   def index
-    subreddit_array =['pics', 'earthporn', 'historyporn', 'food', 'aww', 'wallpapers', 'carporn', 'space', 'sports']
+    subreddit_array =['pics', 'historyporn', 'food', 'aww', 'wallpapers', 'carporn', 'space', 'sports', 'art', 'beerporn']
     @rand_sub = subreddit_array[rand(subreddit_array.length)]
     @response = RestClient.get("https://api.imgur.com/3/gallery/r/#{@rand_sub}", Authorization: "Client-ID #{ENV['IMGUR_CLIENT_ID']}")
     render json: @response, status: 200
